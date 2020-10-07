@@ -28,4 +28,8 @@ test("Exercise 5", () => {
       },
     },
   ]);
+
+  expect(getData(staffMembers, "hello", "Web Developer II")).toStrictEqual([]); 
+  expect(getData(45, "hello", "Web Developer II")).toStrictEqual(undefined); 
+  expect(getData(staffMembers, "title", "hello")).toStrictEqual([]); 
 });

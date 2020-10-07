@@ -85,8 +85,15 @@ const staffMembers = [
   },
 ];
 
-const getData = (arr, key, val) => {
-  // return something
+const getData = (arr, key, val) => {  
+  if (!Array.isArray(arr)){
+    return undefined;
+  }
+  
+  return arr.filter((obj)=> {
+    const {[key]: myKey, skillLevels: {[key]: mySkillKey}} = obj;  
+    return myKey !== undefined ? myKey === val : (mySkillKey !== undefined ? mySkillKey >= val: false);
+  });
 };
 
 // 2. Do a console.log to verify your function.

@@ -9,4 +9,8 @@ test("Exercise 3", () => {
     "Louis Reasoner",
     "Shahan Haig Krakirian",
   ]);
+
+  expect(fullName([])).toStrictEqual([]);
+  expect(fullName(12)).toStrictEqual(undefined);
+
 });

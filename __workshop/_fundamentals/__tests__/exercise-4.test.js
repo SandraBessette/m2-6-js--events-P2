@@ -7,4 +7,10 @@ test("Exercise 4", () => {
     { name: { first: "Lem", middle: "E.", last: "Tweakit" }, age: 45 },
   ]);
   expect(olderPeople(people, 50)).toStrictEqual([]);
+  expect(olderPeople(people, 40)).toStrictEqual([
+    { name: { first: "Lem", middle: "E.", last: "Tweakit" }, age: 45 },
+  ]);
+
+  expect(olderPeople([], 40)).toStrictEqual([]);
+  expect(olderPeople(45, 40)).toStrictEqual(undefined);
 });

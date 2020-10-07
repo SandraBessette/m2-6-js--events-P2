@@ -90,9 +90,15 @@ const getData = (arr, key, val) => {
     return undefined;
   }
   
+  /*
+  //Other way of doing it that works also (for fun :-) )
   return arr.filter((obj)=> {
     const {[key]: myKey, skillLevels: {[key]: mySkillKey}} = obj;  
     return myKey !== undefined ? myKey === val : (mySkillKey !== undefined ? mySkillKey >= val: false);
+  });*/
+
+  return arr.filter((obj)=> {    
+    return obj[key] !== undefined ? obj[key] === val : (obj["skillLevels"][key] !== undefined ? obj["skillLevels"][key] >= val: false);
   });
 };
 

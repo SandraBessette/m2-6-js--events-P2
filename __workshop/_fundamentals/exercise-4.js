@@ -23,10 +23,8 @@ function olderPeople(peopleArr, age) {
     return undefined;
   }
 
-  return peopleArr.filter((obj)=> {
-    const {age: objAge} = obj;
-    return objAge !== undefined && objAge > age;
-
+  return peopleArr.filter((obj)=> {    
+    return obj.age !== undefined && obj.age > age;
   });
 }
 

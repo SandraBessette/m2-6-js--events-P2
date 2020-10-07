@@ -11,6 +11,7 @@ test("Exercise 4", () => {
     { name: { first: "Lem", middle: "E.", last: "Tweakit" }, age: 45 },
   ]);
 
+  expect(olderPeople(people, 150)).toStrictEqual([]);
   expect(olderPeople([], 40)).toStrictEqual([]);
   expect(olderPeople(45, 40)).toStrictEqual(undefined);
 });

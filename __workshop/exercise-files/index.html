@@ -5,47 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap" rel="stylesheet"/>
 
     <title>Signup Form</title>
   </head>
   <body>
-    <h1>Signup form</h1>
-    <form action="">
-      <div>
+   
+    <div class="wrapper">     
+      <form action="">
+        <h1>Signup form</h1>
+      <div class="text">
         <label for="fname">Full name:</label>
-        <input type="text" id="fname" name="fname"/>
+        <input type="text" id="fname" name="fname" required/>
       </div>
-      <div>
+      <div class="text">
         <label for="saddress">Street address</label>
-        <input type="text" id="saddress" name="saddress"/>
+        <input type="text" id="saddress" name="saddress" required/>
       </div>
-      <div>
+      <div class="text">
         <label for="email">Email address</label>
-        <input type="email" id="email" name="email"/>
+        <input type="email" id="email" name="email" required/>
       </div>
-      <div>
+      <div class="text">
         <label for="phone">Phone number</label>
-        <input type="text" id="phone" name="phone"/>
+        <input type="text" id="phone" name="phone" required/>
       </div>
-      <div>
+      <div class="text">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password"/>
+        <input type="password" id="password" name="password" required/>
       </div>
-      <div>
+      <div class="text">
         <label for="cpassword">Confirm Password</label>
-        <input type="password" id="cpassword" name="cpassword"/>
+        <input type="password" id="cpassword" name="cpassword" required/>
       </div>
-      <div>        
-        <input type="checkbox" id="termsServices" name="termsServices" value="Services"/>
+      <div class="checkbox">        
+        <input type="checkbox" id="termsServices" name="termsServices" value="Services" required/>
         <label for="termsServices">I agree to the <a href="">terms of service</a></label>
       </div>
       <div class="error"></div>
       <footer>
-        <button>clear</button>
-        <input type="submit" name="submit"/>
+        <button class="btn clear-btn">clear</button>
+        <input class="btn submit-btn" type="submit" name="submit"/>
       </footer>
 
     </form>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>

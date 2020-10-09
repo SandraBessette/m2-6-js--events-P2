@@ -43,5 +43,10 @@ function submitForm(event) {
  }
 
 const form = document.querySelector('form');
-
 form.addEventListener('submit', submitForm);
+
+const clearBtn = document.querySelector('.clear-btn');
+clearBtn.addEventListener("click", function(event) {
+    form.reset();
+    event.preventDefault();
+});

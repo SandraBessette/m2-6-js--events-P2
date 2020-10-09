@@ -1,17 +1,14 @@
 // add js here
-function logSubmit(event) {
+function submitForm(event) {
   
     let isError = false;
     const password = document.getElementById("password");
     const confirmPassword = document.getElementById("cpassword");
     const error = document.querySelector('.error');
     const errorText = document.querySelector('.error p');
-
-    //initialize
-    error.classList.remove("error-display");   
-    password.classList.remove("input-error");
-    confirmPassword.classList.remove("input-error");    
     
+    clearErrors(error, password, confirmPassword);
+   
     if (!document.getElementById("termsServices").checked){      
         window.alert("You need to agree for the terms of service");
         isError = true;        
@@ -39,6 +36,12 @@ function logSubmit(event) {
     event.preventDefault();
   }
 
+ const clearErrors = (error, password, confirmPassword) => {
+    error.classList.remove("error-display");   
+    password.classList.remove("input-error");
+    confirmPassword.classList.remove("input-error");    
+ }
+
 const form = document.querySelector('form');
 
-form.addEventListener('submit', logSubmit);
+form.addEventListener('submit', submitForm);
